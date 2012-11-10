@@ -1,8 +1,7 @@
 language: ruby
 rvm:
   - 1.9.3
-  - jquery-rails
-  - rbx-19mode
+  - rails
 services: postgresql
 before_script:
   - psql -c 'create database rails_new_lab_test;' -U postgres
