@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
-  validates :title, :presence => true
   def index
     @posts = Post.all
 
