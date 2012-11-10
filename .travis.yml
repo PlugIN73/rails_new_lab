@@ -1,8 +1,9 @@
 language: ruby
 rvm:
   - 1.9.3
-  - rails
-services: postgresql
+env:
+  - DB=postgresql
+script:
+  - RAILS_ENV=test bundle exec rake --trace db:migrate test
 before_script:
-  - psql -c 'create database rails_new_lab_test;' -U postgres
-  - bundle exec rake db:migrate
+  - psql -c 'create database rails_new_lab_test' -U postgres
