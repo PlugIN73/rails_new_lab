@@ -37,6 +37,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def change_state
+    @state = "123"
+  end
+
   # POST /posts
   # POST /posts.json
   def create
