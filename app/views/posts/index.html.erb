@@ -15,7 +15,6 @@
 
 
 <% @posts.each do |post| %>
-  <% post_change_state_path(post) %>
   <tr>
     <td><%= post.published_at %></td>
     <td><%= post.title %></td>

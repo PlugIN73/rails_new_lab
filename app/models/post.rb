@@ -2,21 +2,17 @@ class Post < ActiveRecord::Base
   attr_accessible :body, :description, :published_at, :title
   validates :title, :presence => true
 
-  state_machine initial: :new do
-    event :accept do
-      transition [:new, :rejected] => :accepted
+  state_machine initial: :unpublished do
+    event :unpublish do
+      transition all => :unpublished
     end
 
-    event :reject do
-      transition :new => :rejected
+    event :publish do
+      transition all => :published
     end
 
-    event :start do
-      transition :accepted => :started
-    end
-
-    event :finish do
-      transition :started => :finished
+    event :delete do
+      transition all => :deleted
     end
   end
 end
