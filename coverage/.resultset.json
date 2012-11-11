@@ -250,6 +250,8 @@
         0,
         0,
         null,
+        0,
+        null,
         null,
         null,
         null,
@@ -389,7 +391,7 @@
         null
       ]
     },
-    "timestamp": 1352659664
+    "timestamp": 1352660301
   },
   "Functional Tests": {
     "coverage": {
@@ -633,9 +635,11 @@
         null,
         null,
         1,
+        1,
+        1,
         0,
-        0,
-        0,
+        null,
+        1,
         null,
         null,
         null,
@@ -770,6 +774,6 @@
         null
       ]
     },
-    "timestamp": 1352659670
+    "timestamp": 1352660307
   }
 }
