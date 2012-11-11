@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :body, :description, :published_at, :title
+  attr_accessible :body, :description, :published_at, :title, :state
   validates :title, :presence => true
 
   state_machine initial: :unpublished do

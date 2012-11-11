@@ -34,16 +34,16 @@ class PostsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  #test "should update post" do
-    #put :update, id: @post, post: { body: @post.body, description: @post.description, published_at: @post.published_at, title: @post.title, state: @post.state}
-    #assert_redirected_to post_path(assigns(:post))
-  #end
+  test "should update post" do
+    put :update, id: @post, post: { body: @post.body, description: @post.description, published_at: @post.published_at, title: @post.title}
+    assert_redirected_to post_path(assigns(:post))
+  end
 
   test "should destroy post" do
     assert_difference('Post.count', -1) do
       delete :destroy, id: @post
     end
-
     assert_redirected_to posts_path
   end
+
 end
