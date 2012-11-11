@@ -1,0 +1,23 @@
+{
+  "Unknown Test Framework": {
+    "coverage": {
+    },
+    "timestamp": 1352649496
+  },
+  "Unit Tests": {
+    "coverage": {
+      "/home/plugin73/RubymineProjects/rails_new_lab/test/unit/helpers/posts_helper_test.rb": [
+        1,
+        null,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1352651932
+  },
+  "Functional Tests": {
+    "coverage": {
+    },
+    "timestamp": 1352651937
+  }
+}
