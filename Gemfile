@@ -4,6 +4,7 @@ gem 'rails', '3.2.9.rc2'
 gem 'state_machine'
 gem 'jquery-rails'
 gem 'pg'
+gem 'tconsole'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

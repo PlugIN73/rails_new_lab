@@ -39,9 +39,11 @@ class PostsController < ApplicationController
 
   def change_state
     @post = Post.find(params[:post_id])
-    @post.fire_state_event(params[:event])
-    @post.save
-    redirect_to post_path(params[:post_id])
+    if @post
+      @post.fire_state_event(params[:event])
+      @post.save
+    end
+    redirect_to posts_path
   end
 
   # POST /posts
