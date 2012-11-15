@@ -5,6 +5,7 @@ one:
   title: MyString
   description: MyString
   body: MyText
+  state: unpublished
 
 two:
   published_at: 2012-11-09 21:46:50
