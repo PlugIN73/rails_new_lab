@@ -39,17 +39,15 @@ class PostsController < ApplicationController
 
   def change_state
     @post = Post.find(params[:post_id])
-    if @post.update_attributes(params[:post])
-      @post.fire_state_event(params[:event])
-    end
-    redirect_to posts_path
+    @post.fire_state_event(params[:event])
+    @post.save
+    redirect_to post_path(params[:post_id])
   end
 
   # POST /posts
   # POST /posts.json
   def create
     @post = Post.new(params[:post])
-
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }

@@ -4,15 +4,15 @@ class Post < ActiveRecord::Base
 
   state_machine initial: :unpublished do
     event :unpublish do
-      transition [:publish, :delete] => :unpublished
+      transition all => :unpublished
     end
 
     event :publish do
-      transition [:unpublish, :delete] => :published
+      transition all => :published
     end
 
     event :delete do
-      transition [:publish, :unpublish] => :deleted
+      transition all => :deleted
     end
   end
 end

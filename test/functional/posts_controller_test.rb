@@ -47,8 +47,8 @@ class PostsControllerTest < ActionController::TestCase
   end
 
   test "should put change_state" do
-    put :change_state, post_id: @post
-    assert_redirected_to posts_path
+    put :change_state, post_id: @post, event: "delete"
+    assert_response :redirect
   end
 
 end
